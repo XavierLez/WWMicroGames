@@ -14,6 +14,8 @@ public class MiniGameController : MonoBehaviour, ITickable
     [SerializeField] private List<GameObject> signs;
     [SerializeField] private Sprite[] xboxButtonSprites = new Sprite[4];
     [SerializeField] private string[] inputs = new string[] { "A", "B", "X", "Y" };
+    [SerializeField] private GameObject buttonPrefab;
+    private GameObject button;
     public string[,] trueInputs;
     public int[] inputStreak;
 
@@ -44,22 +46,6 @@ public class MiniGameController : MonoBehaviour, ITickable
 
     }
 
-    /* IEnumerator TimerCoroutine(float t) 
-     {
-         yield return new WaitForSeconds(t);
-         nbTick++;
-         uiManager.UpdateTimer(nbTickMax - nbTick);
-
-         if (nbTick < nbTickMax)
-         {
-             StartCoroutine(TimerCoroutine(tickTime));
-         }
-         else 
-         {
-             EndGame(false);
-         }
-     }
-    */
     private void SetDifficulty()
     {
         switch (difficulty)
@@ -127,8 +113,6 @@ public class MiniGameController : MonoBehaviour, ITickable
         {
             EndGame(false);
         }
-
-        DebugInputStreak();
     }
 
     private void EndGame(bool result) 

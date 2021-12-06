@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a95b6095cfe7040b6eea2543ce9b73, type: 3}
   m_Name: Game Config
   m_EditorClassIdentifier: 
-  currenGameSpeed: 3.3
+  currenGameSpeed: 2.1
