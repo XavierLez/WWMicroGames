@@ -83,6 +83,7 @@ public class MiniGameController : MonoBehaviour, ITickable
     private void CreateSigns()
     {
         trueSign = Random.Range(0, signs.Count);
+
         uiManager.InitializeTrueSign(trueSign);
 
         int s = 0;

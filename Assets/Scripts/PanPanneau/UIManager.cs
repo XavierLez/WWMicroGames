@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text trueSignText;
+    [SerializeField] private Sprite[] signSprites = new Sprite[3];
+    [SerializeField] private SpriteRenderer trueSigneSprite;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen;
     [SerializeField] private TMP_Text resultText;
 
     public void InitializeTrueSign(int trueSign)
     {
-        trueSignText.text = (trueSign + 1).ToString();
+        trueSigneSprite.sprite = signSprites[trueSign];
     }
 
     public void UpdateTimer(int nbTickLeft) 
