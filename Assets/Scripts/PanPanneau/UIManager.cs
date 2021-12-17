@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Sprite[] signSprites = new Sprite[3];
     [SerializeField] private SpriteRenderer trueSigneSprite;
     [SerializeField] private TMP_Text timerText;
-    [SerializeField] private GameObject endScreen, bodyGuard;
+    [SerializeField] private GameObject endScreen, bodyGuard, defaite, victoire;
     [SerializeField] private TMP_Text resultText;
 
     public void InitializeTrueSign(int trueSign)
@@ -25,16 +25,17 @@ public class UIManager : MonoBehaviour
     {
         if (result)
         {
-            resultText.text = "Good job !";
-           // victoire.SetActive(true);
+          //  resultText.text = "Good job !";
+            victoire.SetActive(true);
+            bodyGuard.SetActive(true);
             endScreen.SetActive(true);
         }
 
         else
         {
-            resultText.text = "  You can't       enter !";
+           // resultText.text = "  You can't       enter !";
             bodyGuard.SetActive(true);
-           // defaite.SetActive(true);
+            defaite.SetActive(true);
             endScreen.SetActive(true);
         }
       
