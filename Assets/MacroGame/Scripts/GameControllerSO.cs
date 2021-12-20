@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "newGameControllerSO", menuName = "MacroGame/GameControllerSO", order = 0)]
 public class GameControllerSO : ScriptableObject
 {
-    [Range(0f, 10f)]
-    public float currenGameSpeed = 1f;
+    [Range(120f, 190f)]
+    public float currentGameSpeed = 120;
+
+    [Range(1, 3)]
+    public int currentDifficulty = 1;
+
 }
