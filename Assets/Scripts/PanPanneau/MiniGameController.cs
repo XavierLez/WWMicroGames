@@ -56,11 +56,11 @@ public class MiniGameController : MonoBehaviour, ITickable
                 break;
             case 2:
                 nbButtonPerSign = 4;
-                nbTickMax = 6;
+                nbTickMax = 8;
                 break;
             case 3:
-                nbButtonPerSign = 4;
-                nbTickMax = 5;
+                nbButtonPerSign = 5;
+                nbTickMax = 8;
                 break;
             default:
                 nbButtonPerSign = 3;
@@ -153,6 +153,11 @@ public class MiniGameController : MonoBehaviour, ITickable
         return this.nbTickMax;
     }
 
+    public bool GetHasEnded() 
+    {
+        return hasEnded;
+    }
+
     public void OnTick()
     {
         Debug.Log("has ended : " + hasEnded);
@@ -162,7 +167,7 @@ public class MiniGameController : MonoBehaviour, ITickable
             Debug.Log("timer");
             uiManager.UpdateTimer(nbTickMax - Ticker.currentTick);
         }
-        if (Ticker.currentTick == nbTickMax) EndGame(false);
+        if (Ticker.currentTick == nbTickMax && !hasEnded) EndGame(false);
         if (Ticker.currentTick == 8) GameController.FinishGame(result);
     }
 }

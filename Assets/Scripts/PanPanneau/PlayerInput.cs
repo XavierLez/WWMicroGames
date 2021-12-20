@@ -9,7 +9,7 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        if (miniGameController.HasStarted())
+        if (miniGameController.HasStarted() && !miniGameController.GetHasEnded())
         {
             if (Input.GetButtonDown("A"))
             {

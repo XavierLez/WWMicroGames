@@ -28,7 +28,6 @@ public class UIManager : MonoBehaviour
           //  resultText.text = "Good job !";
             victoire.SetActive(true);
             bodyGuard.SetActive(true);
-            endScreen.SetActive(true);
         }
 
         else
@@ -36,8 +35,9 @@ public class UIManager : MonoBehaviour
            // resultText.text = "  You can't       enter !";
             bodyGuard.SetActive(true);
             defaite.SetActive(true);
-            endScreen.SetActive(true);
         }
-      
+
+        endScreen.SetActive(true);
+
     }
 }
