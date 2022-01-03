@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/MicroGames/MG_Trig_NomMG (Duplicate to use)/MG_Trig_Scene_NomMG.unity
-    guid: 0c4f6b5248443eb47a004e3bc7549c37
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
