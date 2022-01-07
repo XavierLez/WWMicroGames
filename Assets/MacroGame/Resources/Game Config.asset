@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Game Config
   m_EditorClassIdentifier: 
   currentGameSpeed: 190
-  currentDifficulty: 2
+  currentDifficulty: 3
