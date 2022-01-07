@@ -17,11 +17,13 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
     private int[] goodColors;
     private bool result;
     private int goodAnswer;
+    public AudioClip audioClip,audioClip2;
 
     private void Awake()
     {
         GameManager.Register();
         GameController.Init(this);
+        GameController.Register();
         balls[0].SetYOffset(Random.Range(0f, 10f));
 
         goodColors = new int[] {-1,-1};
@@ -33,6 +35,7 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
     {
         SetDifficulty();
         rand = -1;
+      
     }
 
     private void SetDifficulty() 
@@ -79,6 +82,7 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
 
     private void LaunchBall(int idx)
     {
+        AudioManager.PlaySound(audioClip,1);
         balls[idx].SetCanMove(true);
         RandomColorIndex(idx);
         goodColors[idx] = rand;
@@ -106,6 +110,7 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
         {
             GameController.FinishGame(false);
             Debug.Log("FALSE");
+            AudioManager.PlaySound(audioClip2, 1);
         }
     }
 }

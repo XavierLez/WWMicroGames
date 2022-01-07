@@ -10,12 +10,17 @@ public class NAC_UIManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private GameObject endScreen, bodyGuard, defaite, victoire;
     [SerializeField] private TMP_Text resultText;
+    public AudioClip audioClip , audioClip2;
 
     public void InitializeTrueSign(int trueSign)
     {
         trueSigneSprite.sprite = signSprites[trueSign];
     }
 
+     void Awake()
+    {
+        GameManager.Register();
+    }
     public void UpdateTimer(int nbTickLeft) 
     {
         timerText.text = nbTickLeft.ToString();
@@ -25,6 +30,7 @@ public class NAC_UIManager : MonoBehaviour
     {
         if (result)
         {
+            AudioManager.PlaySound(audioClip2, 1);
           //  resultText.text = "Good job !";
             victoire.SetActive(true);
             bodyGuard.SetActive(true);
@@ -32,6 +38,7 @@ public class NAC_UIManager : MonoBehaviour
 
         else
         {
+            AudioManager.PlaySound(audioClip, 1);
            // resultText.text = "  You can't       enter !";
             bodyGuard.SetActive(true);
             defaite.SetActive(true);
