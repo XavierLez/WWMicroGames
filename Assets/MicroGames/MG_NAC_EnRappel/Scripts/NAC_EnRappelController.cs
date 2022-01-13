@@ -5,6 +5,10 @@ using UnityEngine;
 public class NAC_EnRappelController : MonoBehaviour, ITickable
 {
 
+    [SerializeField] private GameObject[] easyLayouts;
+    [SerializeField] private GameObject[] mediumLayouts;
+    [SerializeField] private GameObject[] hardLayouts;
+
     private bool hasEnded;
 
     private void Awake()
@@ -24,10 +28,13 @@ public class NAC_EnRappelController : MonoBehaviour, ITickable
         switch (GameController.difficulty) 
         {
             case 1:
+                easyLayouts[Random.Range(0, easyLayouts.Length)].SetActive(true);
                 break;
             case 2:
+                mediumLayouts[Random.Range(0, easyLayouts.Length)].SetActive(true);
                 break;
             case 3:
+                hardLayouts[Random.Range(0, easyLayouts.Length)].SetActive(true);
                 break;
             default:
                 break;
