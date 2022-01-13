@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: NAC_CIND SDF
   m_EditorClassIdentifier: 
-  hashCode: -1324474351
+  hashCode: 455938402
   material: {fileID: -1029695509973359933}
-  materialHashCode: -1655678959
+  materialHashCode: -1549848958
   m_Version: 1.1.0
   m_SourceFontFileGUID: aa1dd20f736cede4993af0a7f125528c
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: aa1dd20f736cede4993af0a7f125528c, type: 3}

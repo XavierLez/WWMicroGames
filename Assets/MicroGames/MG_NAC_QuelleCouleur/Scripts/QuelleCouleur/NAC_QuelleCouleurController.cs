@@ -13,6 +13,7 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
 
     [SerializeField] private NAC_AnswerManager answerManager;
     [SerializeField] private GameObject answerMenu;
+    [SerializeField] private GameObject defeat, victory;
 
     private int[] goodColors;
     private bool result;
@@ -104,12 +105,16 @@ public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
         if (awnser == goodAnswer)
         {
             GameController.FinishGame(true);
+            answerMenu.SetActive(false);
+            victory.SetActive(true);
             Debug.Log("TRUE");
         }
         else 
         {
             GameController.FinishGame(false);
             Debug.Log("FALSE");
+            answerMenu.SetActive(false);
+            defeat.SetActive(true);
             AudioManager.PlaySound(audioClip2, 1);
         }
     }
