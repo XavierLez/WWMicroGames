@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NAC_PlayerInput : MonoBehaviour
+public class NAC1_PlayerInput : MonoBehaviour
 {
 
-    [SerializeField] private NAC_MiniGameController miniGameController;
+    [SerializeField] private NAC1_MiniGameController miniGameController;
 
     void Update()
     {

@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NAC_QuelleCouleurController : MonoBehaviour, ITickable
+public class NAC2_QuelleCouleurController : MonoBehaviour, ITickable
 {
     [SerializeField] private int difficulty;
     private int nbBalls;
     private int tickSecondPhase; //Le tick durant lequel est affiché le menu de sélection des réponses
-    [SerializeField] private NAC_MoveBall[] balls;
+    [SerializeField] private NAC2_MoveBall[] balls;
     //[SerializeField] private Color[] colors;
     [SerializeField] private Sprite[] sprites;
 
-    [SerializeField] private NAC_AnswerManager answerManager;
+    [SerializeField] private NAC2_AnswerManager answerManager;
     [SerializeField] private GameObject answerMenu;
     [SerializeField] private GameObject defeat, victory;
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class NAC_AnswerManager : MonoBehaviour
+public class NAC2_AnswerManager : MonoBehaviour
 {
-    [SerializeField] private NAC_QuelleCouleurController qcController;
+    [SerializeField] private NAC2_QuelleCouleurController qcController;
 
     [SerializeField] private string[] answerText;
     [SerializeField] private string[] answerColors;

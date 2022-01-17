@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class NAC_UIManager : MonoBehaviour
+public class NAC1_UIManager : MonoBehaviour
 {
     [SerializeField] private Sprite[] signSprites = new Sprite[3];
     [SerializeField] private SpriteRenderer trueSigneSprite;

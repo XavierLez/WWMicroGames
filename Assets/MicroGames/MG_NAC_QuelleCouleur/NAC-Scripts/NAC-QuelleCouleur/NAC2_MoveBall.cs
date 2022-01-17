@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NAC_MoveBall : MonoBehaviour
+public class NAC2_MoveBall : MonoBehaviour
 {
     private int ballNbTick;
     [SerializeField] private float speed;

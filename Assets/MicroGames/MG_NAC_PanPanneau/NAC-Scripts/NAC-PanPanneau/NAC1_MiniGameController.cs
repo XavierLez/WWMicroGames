@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NAC_MiniGameController : MonoBehaviour, ITickable
+public class NAC1_MiniGameController : MonoBehaviour, ITickable
 {
-    [SerializeField] private NAC_UIManager uiManager;
+    [SerializeField] private NAC1_UIManager uiManager;
     //[SerializeField] private SoundManager soundManager;
 
     //[SerializeField] private int difficulty;

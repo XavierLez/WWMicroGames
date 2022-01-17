@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NAC_SoundManager : MonoBehaviour
+public class NAC1_SoundManager : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> audioClips = new List<AudioClip>();
     [SerializeField] private AudioSource[] audioSources = new AudioSource[4];
